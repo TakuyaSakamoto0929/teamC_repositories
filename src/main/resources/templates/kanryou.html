@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <style> .a{color: red;}
+	
+	
+	.yoko{
+	   
+		border-bottom:solid 1px black;
+		display: flex;
+	 
+	  }
+	  .t{
+	  	max-width: 1000px;
+	  margin: 50px auto; 
+	  text-align: center;}
+	  
+	   .aa{display: flex;
+		justify-content: center;
+	  	position: fixed;
+	     bottom:50px;
+	     margin: auto;
+	   
+	  width: 100%;
+	     border-top:solid 1px black;
+	   
+
+	     
+	     }
+		  .aa .a{color: black;
+			padding-right: 30px;
+		  margin:50px;}
+		 #b{background-color: orange;}
+ </style>
+<title>社員情報更新（完了</title>
+</head>
+<body>
+	
+	
+	<header class="yoko">
+		<p class="a">社員情報更新（完了）</p>
+		<div id="header1" th:insert="header"></div>	
+		
+	 </header>
+		
+	 
+	 <div class="t">
+		
+		
+		<p1 >社員情報の更新が完了しました</p1>
+		
+	 </div>
+	
+	
+	<div class="aa">
+		
+		
+		<form action="/menu" method="post">
+			
+			<input type="submit" value="メニュー" class="a">
+			
+		</form>
+		<form action="/kensaku" method="post">
+			
+			<input type="submit" value="検索へ"class="a" id="b">
+			
+		</form>
+		
+	</div>
+	
+	
+	
+	
+
+</body>
+</html>
