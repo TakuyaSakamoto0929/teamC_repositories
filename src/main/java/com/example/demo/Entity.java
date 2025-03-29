@@ -1,19 +1,18 @@
 package com.example.demo;
-import lombok.Data;
 
 
-@Data
+//import jakarta.validation.constraints.Pattern;
+
+
 public class Entity{
 	
-
+	
 	private int id;
 	private String name;
 	private int age;
 	
-	//@NotBlank
-	//@Pattern(regexp="^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9_]{8,24}+$")
+	//@Pattern(regexp="^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9_]{8,24}+$" ,message="英数大文字1文字以上")
 	private String password;
-	
 	private String kakuninpassword;
 	private String kaishi;
 	private String shuryo;
@@ -26,8 +25,6 @@ public class Entity{
 		this.id=id;
 		this.name=name;
 		this.age=age;
-		
-	
 		this.password=password;
 		this.kakuninpassword=kakuninpassword;
 		this.kaishi=kaishi;
@@ -49,9 +46,9 @@ public class Entity{
 		
 		return this.name;
 	}
-	public String setName(String name) {
+	public void setName(String name) {
 		
-		return this.name=name;
+		this.name=name;
 	}
 	
     public int getAge() {
@@ -67,38 +64,37 @@ public class Entity{
 		
 		return this.password;
 	}
-	public String setPassword(String password) {
+	public void setPassword(String password) {
 		
-		return this.password=password;
+		this.password=password;
 	}
 	
 	public String getKakuninpassword() {
 		
 		return this.kakuninpassword;
 	}
-	public String setKakuninpassword(String kakuninpassword) {
+	public void setKakuninpassword(String kakuninpassword) {
 		
-		return this.kakuninpassword=kakuninpassword;
+		this.kakuninpassword=kakuninpassword;
 	}
 	
 	public String getKaishi() {
 		
 		return this.kaishi;
 	}
-	public String setKaishi(String kaishi) {
+	public void setKaishi(String kaishi) {
 		
-		return this.kaishi=kaishi;
+		this.kaishi=kaishi;
 	}
 	public String getShuryo() {
 		
 		return this.shuryo;
 	}
-	public String setShuryo(String shuryo) {
+	public void setShuryo(String shuryo) {
 		
-		return this.shuryo=shuryo;
+		this.shuryo=shuryo;
 	}
-}
-	
 	
 
 	
+}
