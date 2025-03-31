@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.regex.Pattern;
+import java.util.regex.*;
+
 
 @Controller
 
@@ -79,6 +82,33 @@ public class MyContoroller001 {
 		if(!(kakuninpassword.equals(password))) {
 			m.addAttribute("errKakuninPassword","パスワードと一致していません");
 			return "nyuryoku";}
+			
+				
+				
+				String[] array= {password};
+				String pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+				Pattern p=Pattern.compile(pattern);
+				//Pattern p1=Pattern.compile("[A-Z]");
+			//
+				//変数にarrayのようそを一つずつ格納してる
+				for(String passworderr:array) {
+					
+					if(!(p.matcher(passworderr).find())) {
+						
+						m.addAttribute("errPassword"," 英数含む大文字1文字以上で入力してください");
+						return "nyuryoku";}
+					
+					
+				}	
+				
+			
+	 
+		//if(!(password==pattern)) {
+			//m.addAttribute("errPassword"," 英数含む大文字1文字以上で入力してください");
+			//return "nyuryoku";
+			
+			
+		//}
 		
 		m.addAttribute("id",id);
 		m.addAttribute("name",name);
