@@ -1,0 +1,121 @@
+/* ページ全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* タイトル */
+h2 {
+    color: red;
+    font-weight: lighter;
+}
+
+/* 検索フォームのレイアウト */
+form#searchForm {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 各カラム（左・中央・右）を調整 */
+.search-column, .search-middle, .search-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 各入力欄をラベルと横並びにする */
+.search-column div, .search-middle div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ラベルのスタイル */
+label {
+    font-weight: bold;
+    min-width: 80px;
+    text-align: right;
+}
+
+/* 入力欄のサイズ */
+input {
+    padding: 5px;
+    font-size: 14px;
+    width: 150px;
+}
+
+/* 検索ボタンとクリアボタンを縦並びにする */
+.search-buttons {
+    align-items: center;
+}
+
+/* ボタンのスタイル */
+button, input[type="reset"] {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+}
+
+/* 各ボタンの色指定 */
+button[onclick="location.href='/menu'"] { background-color: lightgray; color: black; } /* メニュー */
+button[onclick="location.href='/employees/register'"] { background-color: yellow; color: black; } /* 登録 */
+button[type="submit"] { background-color: orange; color: black; } /* 検索 */
+input[type="reset"] { background-color: white; color: black; border: 1px solid black; } /* クリア */
+th:block button[type="submit"] { background-color: yellow; color: black; } /* 削除 */
+
+/* 検索結果の件数と削除ボタンを同じ高さに配置 */
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 10px auto;
+}
+.result-count {
+    margin: 0;
+}
+
+/* 検索結果テーブル */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    table-layout: fixed;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightblue;
+}
+
+
+.checkbox-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IDのリンク */
+td a {
+    text-decoration: none;
+    color: blue;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
